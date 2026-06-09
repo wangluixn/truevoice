@@ -43,7 +43,7 @@ export function LanguageToggle({ currentLang, onLanguageChange }: LanguageToggle
           />
           
           {/* 下拉菜单 */}
-          <div className="absolute right-0 mt-2 w-56 bg-gray-800 light:bg-white border border-gray-700 light:border-gray-200 rounded-lg shadow-lg z-50 animate-scale-in">
+          <div className="absolute ltr:right-0 rtl:left-0 mt-2 w-56 bg-gray-800 light:bg-white border border-gray-700 light:border-gray-200 rounded-lg shadow-lg z-50 animate-scale-in">
             {/* 搜索框 */}
             <div className="p-2 border-b border-gray-700 light:border-gray-200">
               <input
@@ -67,14 +67,14 @@ export function LanguageToggle({ currentLang, onLanguageChange }: LanguageToggle
                       setIsOpen(false)
                       setSearchTerm("")
                     }}
-                    className={`w-full px-4 py-3 text-left flex items-center gap-3 hover:bg-gray-700 light:hover:bg-gray-100 transition-colors ${
+                    className={`w-full px-4 py-3 text-start flex items-center gap-3 hover:bg-gray-700 light:hover:bg-gray-100 transition-colors ${
                       currentLang === code ? 'bg-gray-700 light:bg-blue-50' : ''
                     }`}
                   >
                     <span className="text-2xl">{lang.flag}</span>
                     <span className="text-gray-200 light:text-gray-800 font-medium text-sm">{lang.name}</span>
                     {currentLang === code && (
-                      <span className="ml-auto text-blue-400 light:text-blue-600">✓</span>
+                      <span className="ms-auto text-blue-400 light:text-blue-600">✓</span>
                     )}
                   </button>
                 ))

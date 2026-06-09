@@ -90,12 +90,17 @@
 /* RTL (Right-to-Left) 支持 */
 [dir="rtl"] {
   direction: rtl;
-  text-align: right;
 }
 
-/* RTL 模式下调整 flex 布局方向 */
-[dir="rtl"] .flex {
-  flex-direction: row-reverse;
+/* 确保容器在RTL模式下宽度正确 */
+[dir="rtl"] .container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* RTL模式下的文本对齐 */
+[dir="rtl"] .text-center {
+  text-align: center !important;
 }
 
 /* RTL 模式下保持某些元素为 LTR（如图标） */

@@ -370,7 +370,7 @@ export default function Home() {
   const t = translations[currentLang]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-slate-900 to-gray-950 light:bg-gradient-to-br light:from-blue-50 light:via-white light:to-purple-50 text-gray-100 light:text-gray-900">
+    <div className="min-h-screen w-full bg-gradient-to-b from-gray-900 via-slate-900 to-gray-950 light:bg-gradient-to-br light:from-blue-50 light:via-white light:to-purple-50 text-gray-100 light:text-gray-900">
       {/* Header */}
       <header className="border-b border-gray-800 light:border-gray-200 bg-gray-900/50 light:bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -418,7 +418,7 @@ export default function Home() {
               className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 animate-fade-in"
               style={{animationDelay: "0.2s"}}
             >
-              <MessageSquare className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+              <MessageSquare className="me-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
               {t.hero.button}
             </Button>
           </DialogTrigger>
@@ -483,12 +483,12 @@ export default function Home() {
               >
                 {submitting ? (
                   <>
-                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    <Loader2 className="me-2 h-5 w-5 animate-spin" />
                     {t.dialog.publishing}
                   </>
                 ) : (
                   <>
-                    <Send className="mr-2 h-5 w-5" />
+                    <Send className="me-2 h-5 w-5" />
                     {t.dialog.submit}
                   </>
                 )}
@@ -600,7 +600,7 @@ export default function Home() {
                 >
                   {loadingMore ? (
                     <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      <Loader2 className="me-2 h-4 w-4 animate-spin" />
                       加载中...
                     </>
                   ) : (
@@ -702,12 +702,12 @@ export default function Home() {
               >
                 {submittingComment ? (
                   <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Loader2 className="me-2 h-4 w-4 animate-spin" />
                     {t.comments.publishing}
                   </>
                 ) : (
                   <>
-                    <Send className="mr-2 h-4 w-4" />
+                    <Send className="me-2 h-4 w-4" />
                     {t.comments.submit} ({commentContent.length}/300)
                   </>
                 )}

@@ -25,10 +25,26 @@ export default function RootLayout({
   return (
     <html
       lang="zh"
-      dir="ltr"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full w-full flex flex-col" suppressHydrationWarning>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const RTL_LANGUAGES = ['ar'];
+                  const savedLang = localStorage.getItem('language');
+                  const isRTL = savedLang && RTL_LANGUAGES.includes(savedLang);
+                  document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
