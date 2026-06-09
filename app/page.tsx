@@ -53,19 +53,27 @@ export default function Home() {
   const [commentError, setCommentError] = useState('')
 
   useEffect(() => {
-    // 优先从本地存储读取
-    const savedLang = localStorage.getItem('language') as Language | null
-    // 其次检测浏览器语言
-    const detectedLang = detectLanguage()
-    const initialLang = savedLang || detectedLang
-    setCurrentLang(initialLang)
-    
-    // 设置初始文档方向
-    if (typeof document !== 'undefined') {
-      document.documentElement.dir = isRTL(initialLang) ? 'rtl' : 'ltr'
+    // 使用综合语言检测（IP + 时区 + 浏览器）
+    const initLanguage = async () => {
+      const { detectLanguageComprehensive } = await import('@/lib/i18n')
+      const detectedLang = await detectLanguageComprehensive()
+      
+      setCurrentLang(detectedLang)
+      
+      // 如果不是从localStorage读取的，保存检测结果
+      if (typeof window !== 'undefined' && !localStorage.getItem('language')) {
+        localStorage.setItem('language', detectedLang)
+      }
+      
+      // 设置初始文档方向
+      if (typeof document !== 'undefined') {
+        document.documentElement.dir = isRTL(detectedLang) ? 'rtl' : 'ltr'
+      }
+      
+      setMounted(true)
     }
     
-    setMounted(true)
+    initLanguage()
     
     // 加载初始数据
     fetchSecrets()
@@ -154,7 +162,7 @@ export default function Home() {
     setSubmitSuccess(false)
     
     if (formData.content.length < 20 || formData.content.length > 500) {
-      setSubmitError('内容必须在 20-500 字符之间')
+      setSubmitError(t.dialog.errorLength)
       return
     }
     
@@ -283,7 +291,7 @@ export default function Home() {
       const data = await response.json()
       
       if (!response.ok) {
-        setCommentError(data.error || '评论失败')
+        setCommentError(data.error || t.comments.errorDefault)
         return
       }
       
@@ -291,7 +299,7 @@ export default function Home() {
       setComments(prev => [data.comment, ...prev])
       setCommentContent('')
     } catch (error: any) {
-      setCommentError(error.message || '评论失败')
+      setCommentError(error.message || t.comments.errorDefault)
     } finally {
       setSubmittingComment(false)
     }
@@ -460,7 +468,7 @@ export default function Home() {
               
               {submitSuccess && (
                 <div className="flex items-center gap-2 text-sm text-green-400 light:text-green-600 bg-green-500/10 light:bg-green-50 rounded-lg p-3">
-                  <span>✓ 发布成功！</span>
+                  <span>{t.dialog.publishSuccess}</span>
                 </div>
               )}
               
@@ -476,7 +484,7 @@ export default function Home() {
                 {submitting ? (
                   <>
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                    发布中...
+                    {t.dialog.publishing}
                   </>
                 ) : (
                   <>
@@ -512,7 +520,7 @@ export default function Home() {
                 : 'bg-gray-800/50 light:bg-gray-100 text-gray-400 light:text-gray-600 hover:bg-gray-800 light:hover:bg-gray-200'
             }`}
           >
-            我的秘密 ({getMySecretsCount()})
+            {t.feed.mySecrets} ({getMySecretsCount()})
           </button>
         </div>
         
@@ -525,8 +533,8 @@ export default function Home() {
             <MessageSquare className="h-16 w-16 mx-auto mb-4 opacity-50" />
             <p>
               {viewMode === 'mine' 
-                ? '你还没有发布过秘密，去分享你的第一个秘密吧！' 
-                : '还没有秘密，成为第一个分享的人吧'
+                ? t.feed.noMySecretsYet
+                : t.feed.noSecretsYet
               }
             </p>
           </div>
@@ -549,7 +557,7 @@ export default function Home() {
                           </span>
                           {isMySecret && (
                             <span className="text-xs bg-green-500/10 text-green-300 light:text-green-600 light:bg-green-100 px-2 py-1 rounded-full border border-green-500/20 light:border-green-300">
-                              我的
+                              {t.feed.mySecretTag}
                             </span>
                           )}
                         </div>
@@ -668,7 +676,7 @@ export default function Home() {
           <DialogContent className="bg-gray-900 light:bg-white border-gray-800 light:border-gray-200 text-gray-100 light:text-gray-900 max-w-2xl max-h-[80vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="text-xl text-gray-200 light:text-gray-800">
-                评论 ({comments.length})
+                {t.comments.title} ({comments.length})
               </DialogTitle>
             </DialogHeader>
 
@@ -677,7 +685,7 @@ export default function Home() {
               <textarea
                 value={commentContent}
                 onChange={(e) => setCommentContent(e.target.value)}
-                placeholder="写下你的评论... (10-300字符)"
+                placeholder={t.comments.placeholder}
                 className="w-full bg-gray-800 light:bg-gray-50 border border-gray-700 light:border-gray-300 rounded-lg px-4 py-3 text-gray-100 light:text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all min-h-[100px] resize-none"
                 disabled={submittingComment}
               />
@@ -695,12 +703,12 @@ export default function Home() {
                 {submittingComment ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    发布中...
+                    {t.comments.publishing}
                   </>
                 ) : (
                   <>
                     <Send className="mr-2 h-4 w-4" />
-                    发布评论 ({commentContent.length}/300)
+                    {t.comments.submit} ({commentContent.length}/300)
                   </>
                 )}
               </Button>
@@ -715,7 +723,7 @@ export default function Home() {
               ) : comments.length === 0 ? (
                 <div className="text-center py-8 text-gray-400">
                   <MessageSquare className="h-12 w-12 mx-auto mb-3 opacity-50" />
-                  <p>还没有评论，来抢沙发吧！</p>
+                  <p>{t.comments.noComments}</p>
                 </div>
               ) : (
                 comments.map((comment) => (

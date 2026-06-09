@@ -15,6 +15,16 @@ export const translations = {
       description2: '在这里，你可以做真实的自己',
       button: '写下你的秘密',
     },
+    feed: {
+      title: '其他人的真心话',
+      mySecrets: '我的秘密',
+      justNow: '刚刚',
+      reply: '回应',
+      loadMore: '加载更多秘密',
+      noSecretsYet: '还没有秘密，成为第一个分享的人吧',
+      noMySecretsYet: '你还没有发布过秘密，去分享你的第一个秘密吧！',
+      mySecretTag: '我的',
+    },
     dialog: {
       title: '说出你的真心话',
       description: '这里没有评判，只有倾听。你的秘密将永远匿名。',
@@ -30,12 +40,17 @@ export const translations = {
       privacy: '我们不会记录任何个人信息，你的秘密永远安全',
       submit: '匿名发布',
       label: '你的秘密（50-500字）',
+      errorLength: '内容必须在 20-500 字符之间',
+      publishing: '发布中...',
+      publishSuccess: '✓ 发布成功！',
     },
-    feed: {
-      title: '其他人的真心话',
-      justNow: '刚刚',
-      reply: '回应',
-      loadMore: '加载更多秘密',
+    comments: {
+      title: '评论',
+      placeholder: '写下你的评论... (10-300字符)',
+      submit: '发布评论',
+      publishing: '发布中...',
+      errorDefault: '评论失败',
+      noComments: '还没有评论，来抢沙发吧！',
     },
     about: {
       title: '为什么选择 TrueVoice',
@@ -86,6 +101,16 @@ export const translations = {
       description2: 'Here, you can be your true self',
       button: 'Share Your Secret',
     },
+    feed: {
+      title: 'Secrets from Others',
+      mySecrets: 'My Secrets',
+      justNow: 'Just now',
+      reply: 'Reply',
+      loadMore: 'Load More Secrets',
+      noSecretsYet: 'No secrets yet, be the first to share',
+      noMySecretsYet: 'You haven\'t posted any secrets yet, share your first one!',
+      mySecretTag: 'Mine',
+    },
     dialog: {
       title: 'Tell Your Truth',
       description: 'No judgment here, only listening. Your secret stays anonymous forever.',
@@ -101,12 +126,17 @@ export const translations = {
       privacy: 'We never collect personal information. Your secret is safe forever',
       submit: 'Post Anonymously',
       label: 'Your Secret (50-500 characters)',
+      errorLength: 'Content must be between 20-500 characters',
+      publishing: 'Publishing...',
+      publishSuccess: '✓ Published successfully!',
     },
-    feed: {
-      title: 'Secrets from Others',
-      justNow: 'Just now',
-      reply: 'Reply',
-      loadMore: 'Load More Secrets',
+    comments: {
+      title: 'Comments',
+      placeholder: 'Write your comment... (10-300 characters)',
+      submit: 'Post Comment',
+      publishing: 'Publishing...',
+      errorDefault: 'Failed to comment',
+      noComments: 'No comments yet, be the first!',
     },
     about: {
       title: 'Why Choose TrueVoice',
@@ -157,6 +187,16 @@ export const translations = {
       description2: 'ここでは、本当の自分でいられる',
       button: '秘密を書く',
     },
+    feed: {
+      title: 'みんなの本音',
+      mySecrets: '私の秘密',
+      justNow: 'たった今',
+      reply: '返信',
+      loadMore: 'もっと見る',
+      noSecretsYet: 'まだ秘密がありません、最初に共有しましょう',
+      noMySecretsYet: 'まだ秘密を投稿していません、最初の秘密を共有しましょう！',
+      mySecretTag: '私の',
+    },
     dialog: {
       title: '本音を語ろう',
       description: '批判はありません、ただ聴くだけ。あなたの秘密は永遠に匿名です。',
@@ -172,12 +212,17 @@ export const translations = {
       privacy: '個人情報は一切記録しません。あなたの秘密は永遠に安全です',
       submit: '匿名で投稿',
       label: 'あなたの秘密（50〜500文字）',
+      errorLength: 'コンテンツは20〜500文字である必要があります',
+      publishing: '投稿中...',
+      publishSuccess: '✓ 投稿に成功しました！',
     },
-    feed: {
-      title: 'みんなの本音',
-      justNow: 'たった今',
-      reply: '返信',
-      loadMore: 'もっと見る',
+    comments: {
+      title: 'コメント',
+      placeholder: 'コメントを書いてください... (10〜300文字)',
+      submit: 'コメント投稿',
+      publishing: '投稿中...',
+      errorDefault: 'コメントに失敗しました',
+      noComments: 'まだコメントはありません、一番乗りしましょう！',
     },
     about: {
       title: 'TrueVoiceを選ぶ理由',
@@ -228,6 +273,16 @@ export const translations = {
       description2: '여기서는 진짜 자신이 될 수 있어요',
       button: '비밀 남기기',
     },
+    feed: {
+      title: '다른 사람들의 진심',
+      mySecrets: '내 비밀',
+      justNow: '방금',
+      reply: '답장',
+      loadMore: '더 보기',
+      noSecretsYet: '아직 비밀이 없어요, 첫 번째로 공유해보세요',
+      noMySecretsYet: '아직 비밀을 게시하지 않았어요, 첫 비밀을 공유해보세요!',
+      mySecretTag: '내 것',
+    },
     dialog: {
       title: '진심을 말해주세요',
       description: '판단 없이, 오직 경청합니다. 당신의 비밀은 영원히 익명입니다.',
@@ -243,12 +298,17 @@ export const translations = {
       privacy: '개인정보는 절대 기록하지 않습니다. 당신의 비밀은 영원히 안전해요',
       submit: '익명 게시',
       label: '당신의 비밀 (50-500자)',
+      errorLength: '내용은 20-500자 사이여야 합니다',
+      publishing: '게시 중...',
+      publishSuccess: '✓ 성공적으로 게시되었습니다!',
     },
-    feed: {
-      title: '다른 사람들의 진심',
-      justNow: '방금',
-      reply: '답장',
-      loadMore: '더 보기',
+    comments: {
+      title: '댓글',
+      placeholder: '댓글을 작성하세요... (10-300자)',
+      submit: '댓글 게시',
+      publishing: '게시 중...',
+      errorDefault: '댓글 실패',
+      noComments: '아직 댓글이 없어요, 첫 번째가 되어보세요!',
     },
     about: {
       title: 'TrueVoice를 선택하는 이유',
@@ -299,6 +359,16 @@ export const translations = {
       description2: 'Aquí puedes ser tu verdadero yo',
       button: 'Comparte Tu Secreto',
     },
+    feed: {
+      title: 'Secretos de Otros',
+      mySecrets: 'Mis Secretos',
+      justNow: 'Justo ahora',
+      reply: 'Responder',
+      loadMore: 'Cargar Más Secretos',
+      noSecretsYet: 'Aún no hay secretos, sé el primero en compartir',
+      noMySecretsYet: '¡Aún no has publicado ningún secreto, comparte el primero!',
+      mySecretTag: 'Mío',
+    },
     dialog: {
       title: 'Di Tu Verdad',
       description: 'Sin juicios, solo escuchamos. Tu secreto permanece anónimo para siempre.',
@@ -314,12 +384,17 @@ export const translations = {
       privacy: 'Nunca recopilamos información personal. Tu secreto está seguro para siempre',
       submit: 'Publicar Anónimamente',
       label: 'Tu Secreto (50-500 caracteres)',
+      errorLength: 'El contenido debe tener entre 20 y 500 caracteres',
+      publishing: 'Publicando...',
+      publishSuccess: '✓ ¡Publicado exitosamente!',
     },
-    feed: {
-      title: 'Secretos de Otros',
-      justNow: 'Justo ahora',
-      reply: 'Responder',
-      loadMore: 'Cargar Más Secretos',
+    comments: {
+      title: 'Comentarios',
+      placeholder: 'Escribe tu comentario... (10-300 caracteres)',
+      submit: 'Publicar Comentario',
+      publishing: 'Publicando...',
+      errorDefault: 'Error al comentar',
+      noComments: '¡Aún no hay comentarios, sé el primero!',
     },
     about: {
       title: 'Por Qué Elegir TrueVoice',
@@ -370,6 +445,16 @@ export const translations = {
       description2: 'Ici, tu peux être toi-même',
       button: 'Partage Ton Secret',
     },
+    feed: {
+      title: 'Secrets des Autres',
+      mySecrets: 'Mes Secrets',
+      justNow: 'À l\'instant',
+      reply: 'Répondre',
+      loadMore: 'Charger Plus de Secrets',
+      noSecretsYet: 'Pas encore de secrets, soyez le premier à partager',
+      noMySecretsYet: 'Vous n\'avez pas encore publié de secrets, partagez le premier !',
+      mySecretTag: 'Mien',
+    },
     dialog: {
       title: 'Dis Ta Vérité',
       description: 'Sans jugement, juste écoute. Ton secret reste anonyme pour toujours.',
@@ -385,12 +470,17 @@ export const translations = {
       privacy: 'Nous ne collectons jamais d\'informations personnelles',
       submit: 'Publier Anonymement',
       label: 'Ton Secret (50-500 caractères)',
+      errorLength: 'Le contenu doit contenir entre 20 et 500 caractères',
+      publishing: 'Publication...',
+      publishSuccess: '✓ Publié avec succès !',
     },
-    feed: {
-      title: 'Secrets des Autres',
-      justNow: 'À l\'instant',
-      reply: 'Répondre',
-      loadMore: 'Charger Plus de Secrets',
+    comments: {
+      title: 'Commentaires',
+      placeholder: 'Écris ton commentaire... (10-300 caractères)',
+      submit: 'Publier Commentaire',
+      publishing: 'Publication...',
+      errorDefault: 'Échec du commentaire',
+      noComments: 'Pas encore de commentaires, soyez le premier !',
     },
     about: {
       title: 'Pourquoi Choisir TrueVoice',
@@ -441,6 +531,16 @@ export const translations = {
       description2: 'Hier kannst du du selbst sein',
       button: 'Teile Dein Geheimnis',
     },
+    feed: {
+      title: 'Geheimnisse von Anderen',
+      mySecrets: 'Meine Geheimnisse',
+      justNow: 'Gerade eben',
+      reply: 'Antworten',
+      loadMore: 'Mehr Geheimnisse Laden',
+      noSecretsYet: 'Noch keine Geheimnisse, sei der Erste',
+      noMySecretsYet: 'Du hast noch keine Geheimnisse gepostet, teile dein erstes!',
+      mySecretTag: 'Meins',
+    },
     dialog: {
       title: 'Sag Deine Wahrheit',
       description: 'Kein Urteil, nur Zuhören. Dein Geheimnis bleibt für immer anonym.',
@@ -456,12 +556,17 @@ export const translations = {
       privacy: 'Wir sammeln niemals persönliche Informationen',
       submit: 'Anonym Posten',
       label: 'Dein Geheimnis (50-500 Zeichen)',
+      errorLength: 'Inhalt muss zwischen 20 und 500 Zeichen lang sein',
+      publishing: 'Wird gepostet...',
+      publishSuccess: '✓ Erfolgreich gepostet!',
     },
-    feed: {
-      title: 'Geheimnisse von Anderen',
-      justNow: 'Gerade eben',
-      reply: 'Antworten',
-      loadMore: 'Mehr Geheimnisse Laden',
+    comments: {
+      title: 'Kommentare',
+      placeholder: 'Schreibe deinen Kommentar... (10-300 Zeichen)',
+      submit: 'Kommentar Posten',
+      publishing: 'Wird gepostet...',
+      errorDefault: 'Kommentieren fehlgeschlagen',
+      noComments: 'Noch keine Kommentare, sei der Erste!',
     },
     about: {
       title: 'Warum TrueVoice',
@@ -512,6 +617,16 @@ export const translations = {
       description2: 'Aqui você pode ser você mesmo',
       button: 'Compartilhe Seu Segredo',
     },
+    feed: {
+      title: 'Segredos de Outros',
+      mySecrets: 'Meus Segredos',
+      justNow: 'Agora mesmo',
+      reply: 'Responder',
+      loadMore: 'Carregar Mais Segredos',
+      noSecretsYet: 'Ainda não há segredos, seja o primeiro a compartilhar',
+      noMySecretsYet: 'Você ainda não publicou nenhum segredo, compartilhe o primeiro!',
+      mySecretTag: 'Meu',
+    },
     dialog: {
       title: 'Diga Sua Verdade',
       description: 'Sem julgamento, só escuta. Seu segredo permanece anônimo para sempre.',
@@ -527,12 +642,17 @@ export const translations = {
       privacy: 'Nunca coletamos informações pessoais',
       submit: 'Postar Anonimamente',
       label: 'Seu Segredo (50-500 caracteres)',
+      errorLength: 'O conteúdo deve ter entre 20 e 500 caracteres',
+      publishing: 'Publicando...',
+      publishSuccess: '✓ Publicado com sucesso!',
     },
-    feed: {
-      title: 'Segredos de Outros',
-      justNow: 'Agora mesmo',
-      reply: 'Responder',
-      loadMore: 'Carregar Mais Segredos',
+    comments: {
+      title: 'Comentários',
+      placeholder: 'Escreva seu comentário... (10-300 caracteres)',
+      submit: 'Publicar Comentário',
+      publishing: 'Publicando...',
+      errorDefault: 'Falha ao comentar',
+      noComments: 'Ainda não há comentários, seja o primeiro!',
     },
     about: {
       title: 'Por Que Escolher TrueVoice',
@@ -583,6 +703,16 @@ export const translations = {
       description2: 'Здесь ты можешь быть собой',
       button: 'Поделись Своим Секретом',
     },
+    feed: {
+      title: 'Секреты Других',
+      mySecrets: 'Мои Секреты',
+      justNow: 'Только что',
+      reply: 'Ответить',
+      loadMore: 'Загрузить Еще Секреты',
+      noSecretsYet: 'Пока нет секретов, будьте первым',
+      noMySecretsYet: 'Вы еще не опубликовали секреты, поделитесь первым!',
+      mySecretTag: 'Мой',
+    },
     dialog: {
       title: 'Скажи Свою Правду',
       description: 'Без осуждения, только слушаем. Твой секрет навсегда анонимен.',
@@ -598,12 +728,17 @@ export const translations = {
       privacy: 'Мы никогда не собираем личную информацию',
       submit: 'Опубликовать Анонимно',
       label: 'Твой Секрет (50-500 символов)',
+      errorLength: 'Содержание должно быть от 20 до 500 символов',
+      publishing: 'Публикация...',
+      publishSuccess: '✓ Успешно опубликовано!',
     },
-    feed: {
-      title: 'Секреты Других',
-      justNow: 'Только что',
-      reply: 'Ответить',
-      loadMore: 'Загрузить Еще Секреты',
+    comments: {
+      title: 'Комментарии',
+      placeholder: 'Напишите комментарий... (10-300 символов)',
+      submit: 'Опубликовать Комментарий',
+      publishing: 'Публикация...',
+      errorDefault: 'Ошибка комментария',
+      noComments: 'Пока нет комментариев, будьте первым!',
     },
     about: {
       title: 'Почему TrueVoice',
@@ -654,6 +789,16 @@ export const translations = {
       description2: 'यहाँ आप अपना असली रूप दिखा सकते हैं',
       button: 'अपना राज़ साझा करें',
     },
+    feed: {
+      title: 'दूसरों के राज़',
+      mySecrets: 'मेरे राज़',
+      justNow: 'अभी अभी',
+      reply: 'जवाब दें',
+      loadMore: 'और राज़ लोड करें',
+      noSecretsYet: 'अभी तक कोई राज़ नहीं, पहले शेयर करें',
+      noMySecretsYet: 'आपने अभी तक कोई राज़ पोस्ट नहीं किया, पहला शेयर करें!',
+      mySecretTag: 'मेरा',
+    },
     dialog: {
       title: 'अपनी सच्चाई बताएं',
       description: 'यहाँ कोई फैसला नहीं, सिर्फ सुनना। आपका राज़ हमेशा गुमनाम रहेगा।',
@@ -669,12 +814,17 @@ export const translations = {
       privacy: 'हम कभी भी व्यक्तिगत जानकारी एकत्र नहीं करते',
       submit: 'गुमनाम रूप से पोस्ट करें',
       label: 'आपका राज़ (50-500 अक्षर)',
+      errorLength: 'सामग्री 20-500 अक्षरों के बीच होनी चाहिए',
+      publishing: 'पोस्ट हो रहा है...',
+      publishSuccess: '✓ सफलतापूर्वक पोस्ट किया गया!',
     },
-    feed: {
-      title: 'दूसरों के राज़',
-      justNow: 'अभी अभी',
-      reply: 'जवाब दें',
-      loadMore: 'और राज़ लोड करें',
+    comments: {
+      title: 'टिप्पणियाँ',
+      placeholder: 'अपनी टिप्पणी लिखें... (10-300 अक्षर)',
+      submit: 'टिप्पणी पोस्ट करें',
+      publishing: 'पोस्ट हो रहा है...',
+      errorDefault: 'टिप्पणी विफल',
+      noComments: 'अभी तक कोई टिप्पणी नहीं, पहले बनें!',
     },
     about: {
       title: 'TrueVoice क्यों चुनें',
@@ -725,6 +875,16 @@ export const translations = {
       description2: 'Qui puoi essere te stesso',
       button: 'Condividi il Tuo Segreto',
     },
+    feed: {
+      title: 'Segreti degli Altri',
+      mySecrets: 'I Miei Segreti',
+      justNow: 'Proprio ora',
+      reply: 'Rispondi',
+      loadMore: 'Carica Altri Segreti',
+      noSecretsYet: 'Ancora nessun segreto, sii il primo a condividere',
+      noMySecretsYet: 'Non hai ancora pubblicato segreti, condividi il primo!',
+      mySecretTag: 'Mio',
+    },
     dialog: {
       title: 'Di\' la Tua Verità',
       description: 'Nessun giudizio, solo ascolto. Il tuo segreto rimane anonimo per sempre.',
@@ -740,12 +900,17 @@ export const translations = {
       privacy: 'Non raccogliamo mai informazioni personali',
       submit: 'Pubblica Anonimamente',
       label: 'Il Tuo Segreto (50-500 caratteri)',
+      errorLength: 'Il contenuto deve essere tra 20 e 500 caratteri',
+      publishing: 'Pubblicazione...',
+      publishSuccess: '✓ Pubblicato con successo!',
     },
-    feed: {
-      title: 'Segreti degli Altri',
-      justNow: 'Proprio ora',
-      reply: 'Rispondi',
-      loadMore: 'Carica Altri Segreti',
+    comments: {
+      title: 'Commenti',
+      placeholder: 'Scrivi il tuo commento... (10-300 caratteri)',
+      submit: 'Pubblica Commento',
+      publishing: 'Pubblicazione...',
+      errorDefault: 'Commento fallito',
+      noComments: 'Ancora nessun commento, sii il primo!',
     },
     about: {
       title: 'Perché Scegliere TrueVoice',
@@ -796,6 +961,16 @@ export const translations = {
       description2: 'ที่นี่คุณสามารถเป็นตัวของตัวเองได้',
       button: 'แบ่งปันความลับของคุณ',
     },
+    feed: {
+      title: 'ความลับจากคนอื่น',
+      mySecrets: 'ความลับของฉัน',
+      justNow: 'เมื่อกี้นี้',
+      reply: 'ตอบกลับ',
+      loadMore: 'โหลดความลับเพิ่มเติม',
+      noSecretsYet: 'ยังไม่มีความลับ เป็นคนแรกที่แชร์',
+      noMySecretsYet: 'คุณยังไม่ได้โพสต์ความลับ แชร์ความลับแรกของคุณ!',
+      mySecretTag: 'ของฉัน',
+    },
     dialog: {
       title: 'บอกความจริงของคุณ',
       description: 'ไม่มีการตัดสิน เพียงแค่ฟัง ความลับของคุณจะไม่ระบุตัวตนตลอดไป',
@@ -811,12 +986,17 @@ export const translations = {
       privacy: 'เราไม่เก็บข้อมูลส่วนบุคคล',
       submit: 'โพสต์แบบไม่ระบุตัวตน',
       label: 'ความลับของคุณ (50-500 ตัวอักษร)',
+      errorLength: 'เนื้อหาต้องมีความยาว 20-500 ตัวอักษร',
+      publishing: 'กำลังโพสต์...',
+      publishSuccess: '✓ โพสต์สำเร็จ!',
     },
-    feed: {
-      title: 'ความลับจากคนอื่น',
-      justNow: 'เมื่อกี้นี้',
-      reply: 'ตอบกลับ',
-      loadMore: 'โหลดความลับเพิ่มเติม',
+    comments: {
+      title: 'ความคิดเห็น',
+      placeholder: 'เขียนความคิดเห็นของคุณ... (10-300 ตัวอักษร)',
+      submit: 'โพสต์ความคิดเห็น',
+      publishing: 'กำลังโพสต์...',
+      errorDefault: 'แสดงความคิดเห็นล้มเหลว',
+      noComments: 'ยังไม่มีความคิดเห็น เป็นคนแรก!',
     },
     about: {
       title: 'ทำไมต้องเลือก TrueVoice',
@@ -867,6 +1047,16 @@ export const translations = {
       description2: 'Ở đây, bạn có thể là chính mình',
       button: 'Chia Sẻ Bí Mật Của Bạn',
     },
+    feed: {
+      title: 'Bí Mật Từ Người Khác',
+      mySecrets: 'Bí Mật Của Tôi',
+      justNow: 'Vừa xong',
+      reply: 'Trả lời',
+      loadMore: 'Tải Thêm Bí Mật',
+      noSecretsYet: 'Chưa có bí mật nào, hãy là người đầu tiên chia sẻ',
+      noMySecretsYet: 'Bạn chưa đăng bí mật nào, chia sẻ bí mật đầu tiên!',
+      mySecretTag: 'Của tôi',
+    },
     dialog: {
       title: 'Nói Sự Thật Của Bạn',
       description: 'Không phán xét, chỉ lắng nghe. Bí mật của bạn sẽ ẩn danh mãi mãi.',
@@ -882,12 +1072,17 @@ export const translations = {
       privacy: 'Chúng tôi không bao giờ thu thập thông tin cá nhân',
       submit: 'Đăng Ẩn Danh',
       label: 'Bí Mật Của Bạn (50-500 ký tự)',
+      errorLength: 'Nội dung phải từ 20 đến 500 ký tự',
+      publishing: 'Đang đăng...',
+      publishSuccess: '✓ Đăng thành công!',
     },
-    feed: {
-      title: 'Bí Mật Từ Người Khác',
-      justNow: 'Vừa xong',
-      reply: 'Trả lời',
-      loadMore: 'Tải Thêm Bí Mật',
+    comments: {
+      title: 'Bình luận',
+      placeholder: 'Viết bình luận của bạn... (10-300 ký tự)',
+      submit: 'Đăng Bình luận',
+      publishing: 'Đang đăng...',
+      errorDefault: 'Bình luận thất bại',
+      noComments: 'Chưa có bình luận, hãy là người đầu tiên!',
     },
     about: {
       title: 'Tại Sao Chọn TrueVoice',
@@ -938,6 +1133,16 @@ export const translations = {
       description2: 'Di sini, kamu bisa menjadi dirimu sendiri',
       button: 'Bagikan Rahasiamu',
     },
+    feed: {
+      title: 'Rahasia Dari Yang Lain',
+      mySecrets: 'Rahasiaku',
+      justNow: 'Baru saja',
+      reply: 'Balas',
+      loadMore: 'Muat Lebih Banyak Rahasia',
+      noSecretsYet: 'Belum ada rahasia, jadilah yang pertama berbagi',
+      noMySecretsYet: 'Kamu belum posting rahasia, bagikan yang pertama!',
+      mySecretTag: 'Punyaku',
+    },
     dialog: {
       title: 'Katakan Kebenaranmu',
       description: 'Tanpa penghakiman, hanya mendengarkan. Rahasiamu akan tetap anonim selamanya.',
@@ -953,12 +1158,17 @@ export const translations = {
       privacy: 'Kami tidak pernah mengumpulkan informasi pribadi',
       submit: 'Posting Secara Anonim',
       label: 'Rahasiamu (50-500 karakter)',
+      errorLength: 'Konten harus antara 20-500 karakter',
+      publishing: 'Memposting...',
+      publishSuccess: '✓ Berhasil diposting!',
     },
-    feed: {
-      title: 'Rahasia Dari Yang Lain',
-      justNow: 'Baru saja',
-      reply: 'Balas',
-      loadMore: 'Muat Lebih Banyak Rahasia',
+    comments: {
+      title: 'Komentar',
+      placeholder: 'Tulis komentarmu... (10-300 karakter)',
+      submit: 'Posting Komentar',
+      publishing: 'Memposting...',
+      errorDefault: 'Komentar gagal',
+      noComments: 'Belum ada komentar, jadilah yang pertama!',
     },
     about: {
       title: 'Mengapa Memilih TrueVoice',
@@ -1009,6 +1219,16 @@ export const translations = {
       description2: 'هنا، يمكنك أن تكون نفسك الحقيقية',
       button: 'شارك سرك',
     },
+    feed: {
+      title: 'أسرار الآخرين',
+      mySecrets: 'أسراري',
+      justNow: 'الآن',
+      reply: 'رد',
+      loadMore: 'تحميل المزيد من الأسرار',
+      noSecretsYet: 'لا توجد أسرار بعد، كن الأول في المشاركة',
+      noMySecretsYet: 'لم تنشر أي أسرار بعد، شارك الأول!',
+      mySecretTag: 'لي',
+    },
     dialog: {
       title: 'قل حقيقتك',
       description: 'لا حكم هنا، فقط استماع. سرك سيبقى مجهولاً إلى الأبد.',
@@ -1024,12 +1244,17 @@ export const translations = {
       privacy: 'نحن لا نجمع أبداً المعلومات الشخصية',
       submit: 'نشر بشكل مجهول',
       label: 'سرك (50-500 حرف)',
+      errorLength: 'يجب أن يكون المحتوى بين 20 و 500 حرف',
+      publishing: 'جاري النشر...',
+      publishSuccess: '✓ تم النشر بنجاح!',
     },
-    feed: {
-      title: 'أسرار الآخرين',
-      justNow: 'الآن',
-      reply: 'رد',
-      loadMore: 'تحميل المزيد من الأسرار',
+    comments: {
+      title: 'التعليقات',
+      placeholder: 'اكتب تعليقك... (10-300 حرف)',
+      submit: 'نشر التعليق',
+      publishing: 'جاري النشر...',
+      errorDefault: 'فشل التعليق',
+      noComments: 'لا توجد تعليقات بعد، كن الأول!',
     },
     about: {
       title: 'لماذا تختار TrueVoice',
@@ -1142,8 +1367,82 @@ export function isRTL(lang: Language): boolean {
   return RTL_LANGUAGES.includes(lang)
 }
 
+// IP地理位置到语言的映射
+const COUNTRY_TO_LANGUAGE: Record<string, Language> = {
+  'CN': 'zh', 'TW': 'zh', 'HK': 'zh', 'SG': 'zh',
+  'US': 'en', 'GB': 'en', 'AU': 'en', 'CA': 'en', 'NZ': 'en', 'IE': 'en',
+  'JP': 'ja',
+  'KR': 'ko',
+  'ES': 'es', 'MX': 'es', 'AR': 'es', 'CO': 'es', 'CL': 'es', 'PE': 'es', 'VE': 'es',
+  'FR': 'fr', 'BE': 'fr', 'CH': 'fr',
+  'DE': 'de', 'AT': 'de',
+  'BR': 'pt', 'PT': 'pt',
+  'RU': 'ru', 'BY': 'ru', 'KZ': 'ru',
+  'IN': 'hi',
+  'IT': 'it',
+  'TH': 'th',
+  'VN': 'vi',
+  'ID': 'id',
+  'SA': 'ar', 'AE': 'ar', 'EG': 'ar', 'MA': 'ar', 'DZ': 'ar'
+};
+
+// 从时区推断语言
+function detectLanguageFromTimezone(): Language | null {
+  if (typeof Intl === 'undefined') return null;
+  
+  try {
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    
+    // 根据时区推断地区
+    if (timezone.includes('Shanghai') || timezone.includes('Hong_Kong') || 
+        timezone.includes('Taipei') || timezone.includes('Chongqing')) {
+      return 'zh';
+    }
+    if (timezone.includes('Tokyo')) return 'ja';
+    if (timezone.includes('Seoul')) return 'ko';
+    if (timezone.includes('Bangkok')) return 'th';
+    if (timezone.includes('Ho_Chi_Minh') || timezone.includes('Saigon')) return 'vi';
+    if (timezone.includes('Jakarta')) return 'id';
+    if (timezone.includes('Kolkata') || timezone.includes('Mumbai')) return 'hi';
+    if (timezone.includes('Moscow')) return 'ru';
+    if (timezone.includes('Dubai') || timezone.includes('Riyadh')) return 'ar';
+    if (timezone.includes('Madrid') || timezone.includes('Barcelona')) return 'es';
+    if (timezone.includes('Paris')) return 'fr';
+    if (timezone.includes('Berlin') || timezone.includes('Munich')) return 'de';
+    if (timezone.includes('Rome') || timezone.includes('Milan')) return 'it';
+    if (timezone.includes('Sao_Paulo') || timezone.includes('Rio')) return 'pt';
+  } catch (e) {
+    // 忽略错误
+  }
+  
+  return null;
+}
+
+export async function detectLanguageFromIP(): Promise<Language | null> {
+  try {
+    // 使用免费的IP地理位置API
+    const response = await fetch('https://ipapi.co/json/', {
+      signal: AbortSignal.timeout(3000) // 3秒超时
+    });
+    
+    if (response.ok) {
+      const data = await response.json();
+      const country = data.country_code;
+      
+      if (country && COUNTRY_TO_LANGUAGE[country]) {
+        return COUNTRY_TO_LANGUAGE[country];
+      }
+    }
+  } catch (error) {
+    // IP检测失败，静默处理
+    console.debug('IP language detection failed:', error);
+  }
+  
+  return null;
+}
+
 export function detectLanguage(): Language {
-  // 检测浏览器语言
+  // 1. 先检测浏览器语言
   if (typeof window !== 'undefined') {
     const browserLang = navigator.language.toLowerCase();
     
@@ -1165,5 +1464,31 @@ export function detectLanguage(): Language {
     
     return 'en'; // 默认英文
   }
-  return 'zh';
+  return 'en';
+}
+
+// 综合检测语言（优先级：localStorage > IP > 时区 > 浏览器语言）
+export async function detectLanguageComprehensive(): Promise<Language> {
+  // 1. 检查本地存储
+  if (typeof window !== 'undefined') {
+    const savedLang = localStorage.getItem('language') as Language | null;
+    if (savedLang && translations[savedLang]) {
+      return savedLang;
+    }
+  }
+  
+  // 2. 尝试从IP检测（异步，但设置了超时）
+  const ipLang = await detectLanguageFromIP();
+  if (ipLang) {
+    return ipLang;
+  }
+  
+  // 3. 尝试从时区推断
+  const timezoneLang = detectLanguageFromTimezone();
+  if (timezoneLang) {
+    return timezoneLang;
+  }
+  
+  // 4. 最后使用浏览器语言
+  return detectLanguage();
 }
