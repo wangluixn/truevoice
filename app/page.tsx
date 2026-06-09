@@ -92,9 +92,24 @@ export default function Home() {
     return getMySecretIds().length
   }
 
+  // 切换查看模式
+  const handleViewModeChange = async (mode: 'all' | 'mine') => {
+    if (viewMode === mode) return // 如果已经是当前模式，不重复操作
+    
+    setViewMode(mode)
+    setLoading(true)
+    setSecrets([]) // 先清空列表，避免闪烁
+    
+    // 重新加载数据，明确传入mode参数
+    await fetchSecrets(0, mode)
+  }
+
   // 获取秘密列表
-  const fetchSecrets = async (offset = 0) => {
+  const fetchSecrets = async (offset = 0, mode?: 'all' | 'mine') => {
     try {
+      // 如果没有传入mode参数，使用当前viewMode
+      const currentMode = mode !== undefined ? mode : viewMode
+      
       const response = await fetch(`/api/secrets?limit=12&offset=${offset}`)
       
       if (!response.ok) {
@@ -105,7 +120,7 @@ export default function Home() {
       
       // 根据查看模式过滤
       let filteredSecrets = data.secrets
-      if (viewMode === 'mine') {
+      if (currentMode === 'mine') {
         const myIds = getMySecretIds()
         filteredSecrets = data.secrets.filter((s: Secret) => myIds.includes(s.id))
       }
@@ -116,7 +131,7 @@ export default function Home() {
         setSecrets(prev => [...prev, ...filteredSecrets])
       }
       
-      setHasMore(data.secrets.length === 12 && viewMode === 'all')
+      setHasMore(data.secrets.length === 12 && currentMode === 'all')
       setLoading(false)
       setLoadingMore(false)
     } catch (error) {
@@ -125,22 +140,11 @@ export default function Home() {
     }
   }
 
-  // 切换查看模式
-  const handleViewModeChange = (mode: 'all' | 'mine') => {
-    setViewMode(mode)
-    setLoading(true)
-    setSecrets([])
-    
-    // 重新加载数据
-    setTimeout(() => {
-      fetchSecrets()
-    }, 100)
-  }
-
   // 加载更多
   const loadMore = () => {
     setLoadingMore(true)
-    fetchSecrets(secrets.length)
+    // 加载更多时也传入当前的viewMode
+    fetchSecrets(secrets.length, viewMode)
   }
 
   // 处理发布
@@ -180,8 +184,8 @@ export default function Home() {
       // 保存到本地记录
       saveMySecretId(data.secret.id)
       
-      // 刷新列表
-      fetchSecrets()
+      // 刷新列表 - 使用当前的viewMode
+      fetchSecrets(0, viewMode)
       
       // 2秒后关闭对话框
       setTimeout(() => {
