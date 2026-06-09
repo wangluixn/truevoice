@@ -1,26 +1,126 @@
 @import "tailwindcss";
 
+@variant dark (&:is(.dark *));
+@variant light (&:is(.light *));
+
+@theme {
+  /* 亮色模式默认变量 */
+  --color-bg-primary: #f9fafb;
+  --color-bg-secondary: #ffffff;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+}
+
+:root.dark {
+  /* 暗色模式变量 */
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-border: #334155;
+}
+
+/* 默认设置为暗色模式 */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-border: #334155;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root.light {
+  --color-bg-primary: #f9fafb;
+  --color-bg-secondary: #ffffff;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* RTL (Right-to-Left) 支持 */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* RTL 模式下调整 flex 布局方向 */
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+/* RTL 模式下保持某些元素为 LTR（如图标） */
+[dir="rtl"] .lucide {
+  transform: scaleX(-1);
+}
+
+/* RTL 模式下调整间距 */
+[dir="rtl"] .gap-2,
+[dir="rtl"] .gap-3,
+[dir="rtl"] .gap-4 {
+  /* Tailwind 会自动处理，这里只是标记 */
+}
+
+/* RTL 模式下调整对话框位置 */
+[dir="rtl"] .absolute {
+  left: auto;
+}
+
+/* RTL 模式下调整动画 */
+@keyframes slideInRTL {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+[dir="rtl"] .animate-slide-in {
+  animation: slideInRTL 0.5s ease-out;
 }
