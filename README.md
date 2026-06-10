@@ -180,3 +180,4 @@ MIT License
 ---
 
 **Made with ❤️ by TrueVoice Team**
+git push -u origin main
