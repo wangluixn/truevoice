@@ -200,6 +200,8 @@ export const translations = {
       noSecretsYet: 'まだ秘密がありません、最初に共有しましょう',
       noMySecretsYet: 'まだ秘密を投稿していません、最初の秘密を共有しましょう！',
       mySecretTag: '私の',
+      expand: '展開',
+      collapse: '折りたたむ',
     },
     dialog: {
       title: '本音を語ろう',
@@ -286,6 +288,8 @@ export const translations = {
       noSecretsYet: '아직 비밀이 없어요, 첫 번째로 공유해보세요',
       noMySecretsYet: '아직 비밀을 게시하지 않았어요, 첫 비밀을 공유해보세요!',
       mySecretTag: '내 것',
+      expand: '펼치기',
+      collapse: '접기',
     },
     dialog: {
       title: '진심을 말해주세요',
@@ -372,6 +376,8 @@ export const translations = {
       noSecretsYet: 'Aún no hay secretos, sé el primero en compartir',
       noMySecretsYet: '¡Aún no has publicado ningún secreto, comparte el primero!',
       mySecretTag: 'Mío',
+      expand: 'Expandir',
+      collapse: 'Contraer',
     },
     dialog: {
       title: 'Di Tu Verdad',
@@ -458,6 +464,8 @@ export const translations = {
       noSecretsYet: 'Pas encore de secrets, soyez le premier à partager',
       noMySecretsYet: 'Vous n\'avez pas encore publié de secrets, partagez le premier !',
       mySecretTag: 'Mien',
+      expand: 'Développer',
+      collapse: 'Réduire',
     },
     dialog: {
       title: 'Dis Ta Vérité',
@@ -544,6 +552,8 @@ export const translations = {
       noSecretsYet: 'Noch keine Geheimnisse, sei der Erste',
       noMySecretsYet: 'Du hast noch keine Geheimnisse gepostet, teile dein erstes!',
       mySecretTag: 'Meins',
+      expand: 'Erweitern',
+      collapse: 'Einklappen',
     },
     dialog: {
       title: 'Sag Deine Wahrheit',
@@ -630,6 +640,8 @@ export const translations = {
       noSecretsYet: 'Ainda não há segredos, seja o primeiro a compartilhar',
       noMySecretsYet: 'Você ainda não publicou nenhum segredo, compartilhe o primeiro!',
       mySecretTag: 'Meu',
+      expand: 'Expandir',
+      collapse: 'Recolher',
     },
     dialog: {
       title: 'Diga Sua Verdade',
@@ -716,6 +728,8 @@ export const translations = {
       noSecretsYet: 'Пока нет секретов, будьте первым',
       noMySecretsYet: 'Вы еще не опубликовали секреты, поделитесь первым!',
       mySecretTag: 'Мой',
+      expand: 'Развернуть',
+      collapse: 'Свернуть',
     },
     dialog: {
       title: 'Скажи Свою Правду',
@@ -802,6 +816,8 @@ export const translations = {
       noSecretsYet: 'अभी तक कोई राज़ नहीं, पहले शेयर करें',
       noMySecretsYet: 'आपने अभी तक कोई राज़ पोस्ट नहीं किया, पहला शेयर करें!',
       mySecretTag: 'मेरा',
+      expand: 'विस्तार करें',
+      collapse: 'संक्षिप्त करें',
     },
     dialog: {
       title: 'अपनी सच्चाई बताएं',
@@ -888,6 +904,8 @@ export const translations = {
       noSecretsYet: 'Ancora nessun segreto, sii il primo a condividere',
       noMySecretsYet: 'Non hai ancora pubblicato segreti, condividi il primo!',
       mySecretTag: 'Mio',
+      expand: 'Espandi',
+      collapse: 'Riduci',
     },
     dialog: {
       title: 'Di\' la Tua Verità',
@@ -974,6 +992,8 @@ export const translations = {
       noSecretsYet: 'ยังไม่มีความลับ เป็นคนแรกที่แชร์',
       noMySecretsYet: 'คุณยังไม่ได้โพสต์ความลับ แชร์ความลับแรกของคุณ!',
       mySecretTag: 'ของฉัน',
+      expand: 'ขยาย',
+      collapse: 'ย่อ',
     },
     dialog: {
       title: 'บอกความจริงของคุณ',
@@ -1060,6 +1080,8 @@ export const translations = {
       noSecretsYet: 'Chưa có bí mật nào, hãy là người đầu tiên chia sẻ',
       noMySecretsYet: 'Bạn chưa đăng bí mật nào, chia sẻ bí mật đầu tiên!',
       mySecretTag: 'Của tôi',
+      expand: 'Mở rộng',
+      collapse: 'Thu gọn',
     },
     dialog: {
       title: 'Nói Sự Thật Của Bạn',
@@ -1146,6 +1168,8 @@ export const translations = {
       noSecretsYet: 'Belum ada rahasia, jadilah yang pertama berbagi',
       noMySecretsYet: 'Kamu belum posting rahasia, bagikan yang pertama!',
       mySecretTag: 'Punyaku',
+      expand: 'Perluas',
+      collapse: 'Ciutkan',
     },
     dialog: {
       title: 'Katakan Kebenaranmu',
@@ -1232,6 +1256,8 @@ export const translations = {
       noSecretsYet: 'لا توجد أسرار بعد، كن الأول في المشاركة',
       noMySecretsYet: 'لم تنشر أي أسرار بعد، شارك الأول!',
       mySecretTag: 'لي',
+      expand: 'توسيع',
+      collapse: 'طي',
     },
     dialog: {
       title: 'قل حقيقتك',
