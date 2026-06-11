@@ -74,10 +74,14 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 验证内容长度
-    if (content.length < 20 || content.length > 500) {
+    // 验证内容长度（根据语言不同有不同的限制）
+    const isCJK = ['zh', 'ja', 'ko'].includes(lang)
+    const minLength = isCJK ? 20 : 50
+    const maxLength = isCJK ? 500 : 1500
+    
+    if (content.length < minLength || content.length > maxLength) {
       return NextResponse.json(
-        { error: 'Content must be between 20 and 500 characters' },
+        { error: `Content must be between ${minLength} and ${maxLength} characters` },
         { status: 400 }
       )
     }

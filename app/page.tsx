@@ -43,6 +43,16 @@ export default function Home() {
   const [submitError, setSubmitError] = useState('')
   const [submitSuccess, setSubmitSuccess] = useState(false)
 
+  // 根据语言获取字符限制
+  const getCharLimits = () => {
+    // 中文、日文、韩文使用较短的限制
+    if (['zh', 'ja', 'ko'].includes(currentLang)) {
+      return { min: 20, max: 500 }
+    }
+    // 其他语言（英文等）使用较长的限制
+    return { min: 50, max: 1500 }
+  }
+
   // 评论状态
   const [commentDialogOpen, setCommentDialogOpen] = useState(false)
   const [currentSecretId, setCurrentSecretId] = useState<string | null>(null)
@@ -161,7 +171,9 @@ export default function Home() {
     setSubmitError('')
     setSubmitSuccess(false)
     
-    if (formData.content.length < 20 || formData.content.length > 500) {
+    const { min, max } = getCharLimits()
+    
+    if (formData.content.length < min || formData.content.length > max) {
       setSubmitError(t.dialog.errorLength)
       return
     }
@@ -448,7 +460,7 @@ export default function Home() {
               </div>
               <div className="space-y-2">
                 <label className="text-sm text-gray-400 light:text-gray-600">
-                  {t.dialog.label} ({formData.content.length}/500)
+                  {t.dialog.label} ({formData.content.length}/{getCharLimits().max})
                 </label>
                 <textarea 
                   value={formData.content}
@@ -478,7 +490,7 @@ export default function Home() {
               </div>
               <Button 
                 type="submit"
-                disabled={submitting || formData.content.length < 20 || formData.content.length > 500}
+                disabled={submitting || formData.content.length < getCharLimits().min || formData.content.length > getCharLimits().max}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 py-6 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {submitting ? (
