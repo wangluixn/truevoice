@@ -24,6 +24,8 @@ export const translations = {
       noSecretsYet: '还没有秘密，成为第一个分享的人吧',
       noMySecretsYet: '你还没有发布过秘密，去分享你的第一个秘密吧！',
       mySecretTag: '我的',
+      expand: '展开',
+      collapse: '收起',
     },
     dialog: {
       title: '说出你的真心话',
@@ -110,6 +112,8 @@ export const translations = {
       noSecretsYet: 'No secrets yet, be the first to share',
       noMySecretsYet: 'You haven\'t posted any secrets yet, share your first one!',
       mySecretTag: 'Mine',
+      expand: 'Expand',
+      collapse: 'Collapse',
     },
     dialog: {
       title: 'Tell Your Truth',

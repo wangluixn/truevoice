@@ -35,6 +35,7 @@ export default function Home() {
   const [loadingMore, setLoadingMore] = useState(false)
   const [hasMore, setHasMore] = useState(true)
   const [viewMode, setViewMode] = useState<'all' | 'mine'>('all') // 查看模式：全部/我的
+  const [expandedSecrets, setExpandedSecrets] = useState<Set<string>>(new Set()) // 展开的秘密ID
   
   // 发布表单状态
   const [dialogOpen, setDialogOpen] = useState(false)
@@ -370,6 +371,33 @@ export default function Home() {
     }
   }
 
+  // 切换秘密展开/收起
+  const toggleSecretExpand = (secretId: string) => {
+    setExpandedSecrets(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(secretId)) {
+        newSet.delete(secretId)
+      } else {
+        newSet.add(secretId)
+      }
+      return newSet
+    })
+  }
+
+  // 判断内容是否需要折叠
+  const shouldTruncate = (content: string) => {
+    return content.length > 200
+  }
+
+  // 获取显示的内容
+  const getDisplayContent = (secret: Secret) => {
+    const isExpanded = expandedSecrets.has(secret.id)
+    if (!shouldTruncate(secret.content) || isExpanded) {
+      return secret.content
+    }
+    return secret.content.slice(0, 150) + '...'
+  }
+
   // 渲染加载状态，避免闪烁
   if (!mounted) {
     return (
@@ -577,8 +605,19 @@ export default function Home() {
                           {new Date(secret.created_at).toLocaleDateString()}
                         </span>
                       </div>
-                    <p className="text-gray-300 light:text-gray-700 leading-relaxed mb-4 min-h-[60px]">
-                      {secret.content}
+                    <p className="text-gray-300 light:text-gray-700 leading-relaxed mb-4 min-h-[60px] whitespace-pre-wrap">
+                      {getDisplayContent(secret)}
+                      {shouldTruncate(secret.content) && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            toggleSecretExpand(secret.id)
+                          }}
+                          className="ml-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+                        >
+                          {expandedSecrets.has(secret.id) ? t.feed.collapse : t.feed.expand}
+                        </button>
+                      )}
                     </p>
                     <div className="flex items-center gap-4 text-sm text-gray-500 light:text-gray-600">
                       <button 
