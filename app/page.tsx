@@ -713,6 +713,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 使用场景 - SEO 长尾词 */}
+      {t.scenarios && (
+        <section className="py-16 border-t border-gray-800 light:border-gray-200">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-100 light:text-gray-900">
+              {t.scenarios.title}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {t.scenarios.list.map((scenario: string, index: number) => (
+                <div 
+                  key={index}
+                  className="bg-gray-800/40 light:bg-gray-50 p-4 rounded-lg border border-gray-700 light:border-gray-200"
+                >
+                  <p className="text-gray-300 light:text-gray-700 leading-relaxed">
+                    💭 {scenario}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Footer */}
       <footer className="border-t border-gray-800 light:border-gray-200 mt-20 bg-gray-900/50 light:bg-gray-50">
         <div className="container mx-auto px-4 py-8 text-center text-gray-500 light:text-gray-600">

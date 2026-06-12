@@ -82,6 +82,17 @@ export const translations = {
       hotline: '心理援助热线',
       suicide: '自杀预防热线',
     },
+    scenarios: {
+      title: '什么时候你需要 TrueVoice？',
+      list: [
+        '深夜失眠想找人聊天，但不想打扰任何人',
+        '失恋了想匿名倾诉，不想让朋友担心',
+        '工作压力大想吐槽老板，但不敢在朋友圈说',
+        '和家人吵架了想说心里话，又不知道跟谁说',
+        '考试失败了想找个树洞发泄情绪',
+        '有些秘密不敢告诉任何认识的人',
+      ],
+    },
     footer: {
       tagline: '让每个深夜的秘密都被温柔对待',
       privacy: '我们承诺永远保护你的匿名性 🌙',
@@ -169,6 +180,17 @@ export const translations = {
       ],
       hotline: 'Mental Health Hotline',
       suicide: 'Suicide Prevention Hotline',
+    },
+    scenarios: {
+      title: 'When Do You Need TrueVoice?',
+      list: [
+        'Can\'t sleep at night and want someone to talk to anonymously',
+        'Just broke up and need to express feelings without judgment',
+        'Work stress is overwhelming but can\'t vent on social media',
+        'Had a fight with family and need to share your feelings',
+        'Failed an exam and need a safe space to release emotions',
+        'Have secrets you can\'t tell anyone you know',
+      ],
     },
     footer: {
       tagline: 'Every midnight secret deserves gentle care',
@@ -258,6 +280,17 @@ export const translations = {
       hotline: 'メンタルヘルスホットライン',
       suicide: '自殺予防ホットライン',
     },
+    scenarios: {
+      title: 'When Do You Need TrueVoice?',
+      list: [
+        'Can\'t sleep at night and want someone to talk to anonymously',
+        'Just broke up and need to express feelings without judgment',
+        'Work stress is overwhelming but can\'t vent on social media',
+        'Had a fight with family and need to share your feelings',
+        'Failed an exam and need a safe space to release emotions',
+        'Have secrets you can\'t tell anyone you know',
+      ],
+    },
     footer: {
       tagline: '真夜中の秘密はすべて優しくケアされる',
       privacy: '匿名性を永遠に守ることを約束します 🌙',
@@ -345,6 +378,10 @@ export const translations = {
       ],
       hotline: '정신건강 상담전화',
       suicide: '자살예방 상담전화',
+    },
+    scenarios: {
+      title: 'When Do You Need TrueVoice?',
+      list: ['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know'],
     },
     footer: {
       tagline: '한밤의 모든 비밀은 따뜻하게 보살펴집니다',
@@ -434,6 +471,7 @@ export const translations = {
       hotline: 'Línea de Salud Mental',
       suicide: 'Línea de Prevención del Suicidio',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'Cada secreto de medianoche merece cuidado gentil',
       privacy: 'Prometemos proteger tu anonimato para siempre 🌙',
@@ -520,8 +558,9 @@ export const translations = {
         'Protège ta vie privée. Ne révèle pas d\'informations personnelles',
       ],
       hotline: 'Ligne d\'Aide Psychologique',
-      suicide: 'Ligne de Prévention du Suicide',
+      suicide: 'Ligne de Prévention du Suicidio',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'Chaque secret de minuit mérite une attention douce',
       privacy: 'Nous promettons de protéger ton anonymat pour toujours 🌙',
@@ -610,6 +649,7 @@ export const translations = {
       hotline: 'Psychische Gesundheits-Hotline',
       suicide: 'Suizidpräventions-Hotline',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'Jedes Mitternachtsgeheimnis verdient sanfte Pflege',
       privacy: 'Wir versprechen, deine Anonymität für immer zu schützen 🌙',
@@ -698,6 +738,7 @@ export const translations = {
       hotline: 'Linha de Saúde Mental',
       suicide: 'Linha de Prevenção ao Suicídio',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'Todo segredo da meia-noite merece cuidado gentil',
       privacy: 'Prometemos proteger seu anonimato para sempre 🌙',
@@ -786,6 +827,7 @@ export const translations = {
       hotline: 'Горячая Линия Психического Здоровья',
       suicide: 'Горячая Линия Предотвращения Самоубийств',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'Каждый полуночный секрет заслуживает бережной заботы',
       privacy: 'Мы обещаем защищать твою анонимность навсегда 🌙',
@@ -874,6 +916,7 @@ export const translations = {
       hotline: 'मानसिक स्वास्थ्य हॉटलाइन',
       suicide: 'आत्महत्या रोकथाम हॉटलाइन',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'हर आधी रात का राज़ कोमल देखभाल का हकदार है',
       privacy: 'हम आपकी गुमनामी को हमेशा सुरक्षित रखने का वादा करते हैं 🌙',
@@ -962,6 +1005,7 @@ export const translations = {
       hotline: 'Linea di Assistenza per la Salute Mentale',
       suicide: 'Linea di Prevenzione del Suicidio',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'Ogni segreto di mezzanotte merita cura gentile',
       privacy: 'Promettiamo di proteggere il tuo anonimato per sempre 🌙',
@@ -1050,6 +1094,7 @@ export const translations = {
       hotline: 'สายด่วนสุขภาพจิต',
       suicide: 'สายด่วนป้องกันการฆ่าตัวตาย',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'ทุกความลับยามเที่ยงคืนสมควรได้รับการดูแลอย่างอ่อนโยน',
       privacy: 'เราสัญญาว่าจะปกป้องการไม่ระบุตัวตนของคุณตลอดไป 🌙',
@@ -1138,6 +1183,7 @@ export const translations = {
       hotline: 'Đường Dây Nóng Sức Khỏe Tâm Thần',
       suicide: 'Đường Dây Nóng Phòng Chống Tự Tử',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'Mọi bí mật nửa đêm đều xứng đáng được chăm sóc nhẹ nhàng',
       privacy: 'Chúng tôi hứa bảo vệ sự ẩn danh của bạn mãi mãi 🌙',
@@ -1226,6 +1272,7 @@ export const translations = {
       hotline: 'Hotline Kesehatan Mental',
       suicide: 'Hotline Pencegahan Bunuh Diri',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'Setiap rahasia tengah malam layak mendapat perawatan lembut',
       privacy: 'Kami berjanji melindungi anonimitasmu selamanya 🌙',
@@ -1314,6 +1361,7 @@ export const translations = {
       hotline: 'خط ساخن للصحة النفسية',
       suicide: 'خط ساخن لمنع الانتحار',
     },
+    scenarios: {title:'When Do You Need TrueVoice?',list:['Can\'t sleep at night and want someone to talk to anonymously','Just broke up and need to express feelings without judgment','Work stress is overwhelming but can\'t vent on social media','Had a fight with family and need to share your feelings','Failed an exam and need a safe space to release emotions','Have secrets you can\'t tell anyone you know']},
     footer: {
       tagline: 'كل سر في منتصف الليل يستحق رعاية لطيفة',
       privacy: 'نعدك بحماية عدم الكشف عن هويتك إلى الأبد 🌙',
